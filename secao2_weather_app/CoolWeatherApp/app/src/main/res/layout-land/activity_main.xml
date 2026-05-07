@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout landscape — imagem à esquerda, dados à direita -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sunny_bg_land"
+    tools:context=".MainActivity">
+
+    <!-- Ícone do tempo — lado esquerdo -->
+    <ImageView
+        android:id="@+id/weatherImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/clear_day"
+        android:contentDescription="Ícone do tempo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/dataGrid" />
+
+    <!-- Grelha de dados — lado direito -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/dataGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:columnCount="2"
+        app:rowCount="6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/weatherImage"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Linha Latitude -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_latitude"
+            android:padding="6dp"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <EditText
+            android:id="@+id/editLatitude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="38.076"
+            android:inputType="numberDecimal|numberSigned"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <!-- Linha Longitude -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_longitude"
+            android:padding="6dp"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <EditText
+            android:id="@+id/editLongitude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="-9.12"
+            android:inputType="numberDecimal|numberSigned"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <!-- Linha Pressão -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_pressure"
+            android:padding="6dp"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView
+            android:id="@+id/pressureValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="---"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <!-- Linha Direcção do Vento -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_wind_direction"
+            android:padding="6dp"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView
+            android:id="@+id/windDirectionValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="---"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <!-- Linha Velocidade do Vento -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_wind_speed"
+            android:padding="6dp"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView
+            android:id="@+id/windSpeedValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="---"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <!-- Linha Temperatura -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_temperature"
+            android:padding="6dp"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView
+            android:id="@+id/temperatureValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="---"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <!-- Linha Hora -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_time"
+            android:padding="6dp"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView
+            android:id="@+id/timeValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="---"
+            android:background="?attr/background"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Botão Actualizar — em baixo ao centro -->
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/btn_update"
+        android:backgroundTint="@color/buttonColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

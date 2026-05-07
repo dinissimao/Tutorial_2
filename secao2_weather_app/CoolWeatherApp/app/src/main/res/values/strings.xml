@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Strings em português (idioma por defeito) -->
+<resources>
+    <string name="app_name">Cool Weather APP</string>
+    <string name="label_latitude">Latitude</string>
+    <string name="label_longitude">Longitude</string>
+    <string name="label_pressure">Pressão ao Nível do Mar</string>
+    <string name="label_wind_direction">Direcção do Vento</string>
+    <string name="label_wind_speed">Velocidade do Vento</string>
+    <string name="label_temperature">Temperatura</string>
+    <string name="label_time">Hora</string>
+    <string name="btn_update">ACTUALIZAR</string>
+    <string name="default_latitude">38.076</string>
+    <string name="default_longitude">-9.12</string>
+    <string name="unit_pressure"> hPa</string>
+    <string name="unit_speed"> km/h</string>
+    <string name="unit_temperature"> °C</string>
+    <string name="unit_degrees">°</string>
+</resources>

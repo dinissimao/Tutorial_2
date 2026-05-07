@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores base do Material -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Cores do tema Dia -->
+    <color name="day_primary">#FF1976D2</color>
+    <color name="day_primary_variant">#FF0D47A1</color>
+    <color name="day_secondary">#FF03A9F4</color>
+
+    <!-- Cores do tema Noite -->
+    <color name="night_primary">#FF1A237E</color>
+    <color name="night_primary_variant">#FF0D1B5E</color>
+    <color name="night_secondary">#FF3949AB</color>
+
+    <!-- Cor de fundo dos cards/views -->
+    <color name="viewBG">#AA000000</color>
+
+    <!-- Cor do texto das etiquetas meteorológicas -->
+    <color name="WeatherLabel">#FFFFFFFF</color>
+
+    <!-- Cor do botão -->
+    <color name="buttonColor">#FF1565C0</color>
+</resources>
